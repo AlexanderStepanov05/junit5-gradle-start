@@ -5,13 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1cdf5f94-fda9-4871-ae9b-6a8a99529554" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/extension/ConditionalExtension.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/extension/GlobalExtension.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/extension/PostProcessingExtension.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/extension/ThrowableExtension.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/UserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/dao/UserDaoMock.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/UserServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/paramresolver/UserServiceParamResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/extension/UserServiceParamResolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/extension/PostProcessingExtension.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/extension/PostProcessingExtension.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/extension/UserServiceParamResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/extension/UserServiceParamResolver.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,34 +52,7 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="junit5_gradle_start" type="f1a62948:ProjectNode" />
                 <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
-                <item name="testCompileClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
-                <item name="org.junit.jupiter:junit-jupiter-engine:5.9.1" type="b3323d55:ExternalSystemViewDefaultContributor$DependencyExternalSystemNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="junit5_gradle_start" type="f1a62948:ProjectNode" />
-                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
-                <item name="testCompileClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
-                <item name="org.junit.jupiter:junit-jupiter-engine:5.9.1" type="b3323d55:ExternalSystemViewDefaultContributor$DependencyExternalSystemNode" />
-                <item name="org.junit:junit-bom:5.9.1" type="b3323d55:ExternalSystemViewDefaultContributor$DependencyExternalSystemNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="junit5_gradle_start" type="f1a62948:ProjectNode" />
-                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
-                <item name="testCompileClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
-                <item name="org.junit.jupiter:junit-jupiter-engine:5.9.1" type="b3323d55:ExternalSystemViewDefaultContributor$DependencyExternalSystemNode" />
-                <item name="org.junit:junit-bom:5.9.1" type="b3323d55:ExternalSystemViewDefaultContributor$DependencyExternalSystemNode" />
-                <item name="org.junit.platform:junit-platform-engine:1.9.1" type="b3323d55:ExternalSystemViewDefaultContributor$DependencyExternalSystemNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="junit5_gradle_start" type="f1a62948:ProjectNode" />
-                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
-                <item name="testCompileClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
-                <item name="org.junit.jupiter:junit-jupiter-engine:5.9.1" type="b3323d55:ExternalSystemViewDefaultContributor$DependencyExternalSystemNode" />
-                <item name="org.junit:junit-bom:5.9.1" type="b3323d55:ExternalSystemViewDefaultContributor$DependencyExternalSystemNode" />
-                <item name="org.junit.platform:junit-platform-launcher:1.9.1" type="b3323d55:ExternalSystemViewDefaultContributor$DependencyExternalSystemNode" />
+                <item name="testRuntimeClasspath" type="62daadca:ExternalSystemViewDefaultContributor$DependencyScopeExternalSystemNode" />
               </path>
             </expand>
             <select />
@@ -109,6 +83,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Downloaded.Files.Path.Enabled": "false",
+    "Gradle.Load Gradle Dependencies.executor": "Run",
     "Gradle.LoginTest.checkLoginFunctionalityPerformance.executor": "Run",
     "Gradle.LoginTest.executor": "Run",
     "Gradle.LoginTest.loginFailIfPasswordIsNotCorrect.executor": "Run",
@@ -117,6 +92,8 @@
     "Gradle.UserServiceTest (1).executor": "Run",
     "Gradle.UserServiceTest (2).executor": "Run",
     "Gradle.UserServiceTest.executor": "Run",
+    "Gradle.UserServiceTest.shouldDeleteExistedUser.executor": "Run",
+    "Gradle.UserServiceTest.usersEmptyIfNoUsersAdded.executor": "Run",
     "Gradle.junit5_gradle_start [:TestLauncher.main()].executor": "Run",
     "Gradle.junit5_gradle_start [dependencies].executor": "Run",
     "Repository.Attach.Annotations": "false",
@@ -136,31 +113,12 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.UserServiceTest.usersEmptyIfNoUsersAdded">
-    <configuration name="LoginTest.checkLoginFunctionalityPerformance" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;org.example.UserServiceTest$LoginTest.checkLoginFunctionalityPerformance&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.example.dao" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.UserServiceTest.shouldDeleteExistedUser">
     <configuration name="UserServiceTest (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -210,7 +168,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="UserServiceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="UserServiceTest.shouldDeleteExistedUser" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -223,7 +181,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.example.UserServiceTest&quot;" />
+            <option value="&quot;org.example.UserServiceTest.shouldDeleteExistedUser&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -258,20 +216,42 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="junit5_gradle_start [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="dependencies" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
     <list>
+      <item itemvalue="Gradle.UserServiceTest.shouldDeleteExistedUser" />
       <item itemvalue="Gradle.UserServiceTest.usersEmptyIfNoUsersAdded" />
+      <item itemvalue="Gradle.junit5_gradle_start [dependencies]" />
       <item itemvalue="Gradle.UserServiceTest (2)" />
       <item itemvalue="Gradle.UserServiceTest (1)" />
-      <item itemvalue="Gradle.LoginTest.checkLoginFunctionalityPerformance" />
-      <item itemvalue="Gradle.UserServiceTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.UserServiceTest.shouldDeleteExistedUser" />
+        <item itemvalue="Gradle.junit5_gradle_start [dependencies]" />
         <item itemvalue="Gradle.UserServiceTest.usersEmptyIfNoUsersAdded" />
         <item itemvalue="Gradle.UserServiceTest (2)" />
         <item itemvalue="Gradle.UserServiceTest (1)" />
-        <item itemvalue="Gradle.UserServiceTest" />
-        <item itemvalue="Gradle.LoginTest.checkLoginFunctionalityPerformance" />
       </list>
     </recent_temporary>
   </component>
@@ -293,7 +273,8 @@
       <workItem from="1709375078607" duration="1000" />
       <workItem from="1709410736065" duration="198000" />
       <workItem from="1709453354049" duration="8722000" />
-      <workItem from="1709463807352" duration="4918000" />
+      <workItem from="1709463807352" duration="7151000" />
+      <workItem from="1709473776689" duration="1839000" />
     </task>
     <servers />
   </component>

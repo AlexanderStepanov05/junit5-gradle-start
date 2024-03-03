@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.dao.UserDao;
 import org.example.dto.User;
 
 import java.util.*;
@@ -10,6 +11,15 @@ import static java.util.stream.Collectors.*;
 public class UserService {
 
     private final List<User> users = new ArrayList<>();
+    private final UserDao userDao;
+
+    public UserService(UserDao userDao) {
+        this.userDao = userDao;
+    }
+
+    public boolean delete(Integer userId) {
+        return userDao.delete(userId);
+    }
 
     public void add(User... users) {
         this.users.addAll(Arrays.asList(users));

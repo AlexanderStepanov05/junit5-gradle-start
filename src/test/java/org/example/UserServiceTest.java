@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.dao.UserDao;
 import org.example.dto.User;
 
 import org.example.extension.*;
@@ -9,6 +10,7 @@ import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.*;
+import org.mockito.Mockito;
 
 import java.io.IOException;
 import java.time.Duration;
@@ -26,12 +28,13 @@ import static org.junit.jupiter.api.Assertions.*;
         GlobalExtension.class,
         PostProcessingExtension.class,
         ConditionalExtension.class,
-        ThrowableExtension.class
+//        ThrowableExtension.class
 })
 public class UserServiceTest {
     private static final User IVAN = User.of(1, "Ivan", "123");
     private static final User PETR = User.of(2, "Petr", "111");
     private UserService userService;
+    private UserDao userDao;
 
     @BeforeAll
     void init() {
@@ -39,10 +42,22 @@ public class UserServiceTest {
     }
 
     @BeforeEach
-    void prepare(UserService userService) {
+    void prepare() {
         System.out.println("Before each:" + this);
-        this.userService = userService;
+        this.userDao = Mockito.mock(UserDao.class);
+        this.userService = new UserService(userDao);
 
+    }
+
+    @Test
+    void shouldDeleteExistedUser() {
+        userService.add(IVAN);
+        Mockito.doReturn(true).when(userDao).delete(IVAN.getId());
+//        Mockito.when(userDao.delete(IVAN.getId())).thenReturn(true);
+//        Mockito.doReturn(true).when(userDao).delete(Mockito.any(); dummy object
+        var deleteResult = userService.delete(IVAN.getId());
+
+        assertThat(deleteResult).isTrue();
     }
 
     @Test
@@ -61,7 +76,7 @@ public class UserServiceTest {
     @Test
     void usersSizeIfUserAdded () {
         System.out.println("Test 2:" + this);
-        var userService = new UserService();
+        var userService = new UserService(new UserDao());
         userService.add(IVAN);
         userService.add(PETR);
         var users = userService.getAll();
