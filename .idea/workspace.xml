@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1cdf5f94-fda9-4871-ae9b-6a8a99529554" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/dao/UserDaoSpy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/UserServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -113,32 +113,7 @@
       <recent name="org.example.dao" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.UserServiceTest (2)">
-    <configuration name="UserServiceTest (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="-Dskip" />
-            <option value="&quot;org.example.UserServiceTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Gradle.UserServiceTest.throwExceptionIfDatabaseIsNotAvailable">
     <configuration name="UserServiceTest (2)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -177,6 +152,30 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;org.example.UserServiceTest.shouldDeleteExistedUser&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="UserServiceTest.throwExceptionIfDatabaseIsNotAvailable" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.example.UserServiceTest.throwExceptionIfDatabaseIsNotAvailable&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -235,18 +234,18 @@
     </configuration>
     <list>
       <item itemvalue="Gradle.UserServiceTest.shouldDeleteExistedUser" />
+      <item itemvalue="Gradle.UserServiceTest.throwExceptionIfDatabaseIsNotAvailable" />
       <item itemvalue="Gradle.UserServiceTest.usersEmptyIfNoUsersAdded" />
       <item itemvalue="Gradle.junit5_gradle_start [dependencies]" />
       <item itemvalue="Gradle.UserServiceTest (2)" />
-      <item itemvalue="Gradle.UserServiceTest (1)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.UserServiceTest (2)" />
+        <item itemvalue="Gradle.UserServiceTest.throwExceptionIfDatabaseIsNotAvailable" />
         <item itemvalue="Gradle.UserServiceTest.shouldDeleteExistedUser" />
         <item itemvalue="Gradle.junit5_gradle_start [dependencies]" />
+        <item itemvalue="Gradle.UserServiceTest (2)" />
         <item itemvalue="Gradle.UserServiceTest.usersEmptyIfNoUsersAdded" />
-        <item itemvalue="Gradle.UserServiceTest (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -269,7 +268,7 @@
       <workItem from="1709410736065" duration="198000" />
       <workItem from="1709453354049" duration="8722000" />
       <workItem from="1709463807352" duration="7151000" />
-      <workItem from="1709473776689" duration="3334000" />
+      <workItem from="1709473776689" duration="4387000" />
     </task>
     <servers />
   </component>
