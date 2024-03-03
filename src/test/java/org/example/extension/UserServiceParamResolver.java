@@ -1,4 +1,4 @@
-package org.example.paramresolver;
+package org.example.extension;
 
 import org.example.UserService;
 import org.junit.jupiter.api.extension.ExtensionContext;

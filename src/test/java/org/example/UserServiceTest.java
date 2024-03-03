@@ -2,7 +2,7 @@ package org.example;
 
 import org.example.dto.User;
 
-import org.example.paramresolver.UserServiceParamResolver;
+import org.example.extension.*;
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.collection.IsEmptyCollection;
 import org.junit.jupiter.api.*;
@@ -10,6 +10,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.*;
 
+import java.io.IOException;
 import java.time.Duration;
 import java.util.Map;
 import java.util.Optional;
@@ -21,7 +22,12 @@ import static org.hamcrest.collection.IsMapContaining.hasKey;
 import static org.junit.jupiter.api.Assertions.*;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-@ExtendWith(UserServiceParamResolver.class)
+@ExtendWith({UserServiceParamResolver.class,
+        GlobalExtension.class,
+        PostProcessingExtension.class,
+        ConditionalExtension.class,
+        ThrowableExtension.class
+})
 public class UserServiceTest {
     private static final User IVAN = User.of(1, "Ivan", "123");
     private static final User PETR = User.of(2, "Petr", "111");
@@ -40,9 +46,13 @@ public class UserServiceTest {
     }
 
     @Test
-    void usersEmptyIfNoUsersAdded() {
+    void usersEmptyIfNoUsersAdded() throws IOException {
         System.out.println("Test 1:" + this);
         var users = userService.getAll();
+
+        if (true) {
+            throw new IOException();
+        }
 
         MatcherAssert.assertThat(users, IsEmptyCollection.empty());
         assertTrue(users.isEmpty(), "User list should be empty");
